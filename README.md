@@ -80,7 +80,7 @@ All queries must be executed within a secure **OMOP Common Data Model environmen
 
 ## Authors
 
-Rashmita Kudamala
-Aravind V. Kuruvikkattil
-Lalitha Pranathi Pulavarthy
-Saptarshi Purkayastha
+Rashmita Kudamala, 
+Aravind V. Kuruvikkattil, 
+Lalitha Pranathi Pulavarthy, 
+Saptarshi Purkayastha.

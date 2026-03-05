@@ -1,8 +1,9 @@
-# Predicting Early Functional Decline from Longitudinal Biomarker Trajectories
+# Predicting Early Functional Mobility Decline from Longitudinal Laboratory and Vital Sign Trajectories
 
 This repository contains the **SQL queries and analysis notebook** used for the AMIA submission:
 
-**Predicting Early Functional Decline from Longitudinal Laboratory and Vital Sign Trajectories**
+**Predicting Early Functional Decline from Longitudinal Laboratory and Vital Sign Trajectories:
+A Large-Scale Study Using the All of Us Research Program**
 
 The goal of this repository is to enable **reproducible data extraction and analysis using the OMOP Common Data Model (CDM)**.
 
@@ -19,7 +20,13 @@ Using electronic health record data mapped to the **OMOP Common Data Model**, we
 3. Construct longitudinal trajectory features
 4. Train machine learning models to predict functional decline
 
-The repository provides the **data extraction logic and modeling pipeline** needed to reproduce the analysis in any OMOP-compatible EHR database.
+The repository provides the **data extraction logic and modeling pipeline** needed to reproduce the analysis in any OMOP-compatible EHR database. Because the extraction queries rely exclusively on standard OMOP CDM tables and concept identifiers, the pipeline is designed to be portable across OMOP-compatible EHR databases.
+
+---
+
+## Key Findings
+
+In a cohort of 196,608 participants from the All of Us Research Program, models using longitudinal biomarker trajectories significantly outperformed models using static laboratory summaries (AUROC 0.771 vs. 0.727; AUPRC 0.397 vs. 0.313; DeLong p < 0.001). A 1:1 age- and sex-matched sensitivity analysis confirmed an independent trajectory signal (AUROC 0.716 vs. demographics-only 0.636), indicating that temporal changes in routine biomarkers capture early physiologic signals of mobility decline beyond demographic risk.
 
 ---
 
@@ -103,6 +110,21 @@ The notebook contains:
 
 ---
 
+## Environment Setup
+
+Install dependencies using:
+
+```
+pip install -r requirements.txt
+```
+
+Note: The notebook contains data extraction steps that use the All of Us Researcher Workbench (Google BigQuery). 
+Running these cells requires appropriate access credentials and permissions.
+
+Researchers without access to the All of Us platform can adapt the SQL queries to their own OMOP Common Data Model database.
+
+---
+
 ## Data Access Notice
 
 This repository contains **analysis code only**.
@@ -119,4 +141,13 @@ Rashmita Kudamala
 Aravind V. Kuruvikkattil  
 Lalitha Pranathi Pulavarthy  
 Saptarshi Purkayastha
-```
+
+---
+
+## Citation
+
+If you use this code or build upon this work, please cite:
+
+Kudamala R, Kuruvikkattil AV, Pulavarthy LP, Purkayastha S.  
+Predicting Early Functional Decline from Longitudinal Laboratory and Vital Sign Trajectories: A Large-Scale Study Using the All of Us Research Program.  
+AMIA Annual Symposium Submission.

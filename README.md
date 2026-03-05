@@ -1,4 +1,5 @@
 # Predicting Early Functional Mobility Decline from Longitudinal Laboratory and Vital Sign Trajectories
+![AMIA Submission](https://img.shields.io/badge/AMIA-Submission-blue)
 
 This repository contains the **SQL queries and analysis notebook** used for the AMIA submission:
 

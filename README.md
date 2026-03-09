@@ -27,7 +27,7 @@ The repository provides the **data extraction logic and modeling pipeline** need
 
 ## Key Findings
 
-In a cohort of 196,608 participants from the All of Us Research Program, models using longitudinal biomarker trajectories significantly outperformed models using static laboratory summaries (AUROC 0.771 vs. 0.727; AUPRC 0.397 vs. 0.313; DeLong p < 0.001). A 1:1 age- and sex-matched sensitivity analysis confirmed an independent trajectory signal (AUROC 0.716 vs. demographics-only 0.636), indicating that temporal changes in routine biomarkers capture early physiologic signals of mobility decline beyond demographic risk.
+In a cohort of 297,861 participants from the All of Us Research Program, models using longitudinal biomarker trajectories significantly outperformed models using static laboratory summaries (AUROC 0.797 vs. 0.755; AUPRC 0.380 vs. 0.304; DeLong p < 0.001). A 1:1 age- and sex-matched sensitivity analysis confirmed an independent trajectory signal (AUROC 0.727 vs. demographics-only 0.680), indicating that temporal changes in routine biomarkers capture early physiologic signals of mobility decline beyond demographic risk. A prediction horizon analysis demonstrated sustained discrimination 3–12 months before decline onset (AUROC 0.768–0.740), quantifying the actionable pre-clinical detection window.
 
 ---
 
@@ -54,10 +54,13 @@ Variables included:
 
 - Albumin
 - Body Mass Index (BMI)
+- C-reactive protein (CRP)
 - Creatinine
 - Diastolic Blood Pressure
+- Erythrocyte Distribution Width (RDW)
 - Hemoglobin A1c (HbA1c)
 - Hemoglobin
+- Potassium
 - Sodium
 - Systolic Blood Pressure
 - 25-hydroxyvitamin D
@@ -89,7 +92,7 @@ ehr-trajectory-functional-decline/
 README.md
 
 notebook/
-    trajectory_functional_decline_pseudo_index_fixed_method.ipynb
+    early_functional_decline_AllofUs.ipynb
 
 sql/
     extract_biomarkers.sql
